@@ -1,4 +1,4 @@
-package racingcar.domain.carname.validation;
+package racingcar.domain.car.carname.validation;
 
 public class FirstCommaValidator implements CarNamesValidator {
 

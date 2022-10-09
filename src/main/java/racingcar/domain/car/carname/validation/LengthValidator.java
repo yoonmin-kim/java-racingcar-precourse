@@ -1,4 +1,4 @@
-package racingcar.domain.carname.validation;
+package racingcar.domain.car.carname.validation;
 
 public class LengthValidator implements CarNameValidator {
 
