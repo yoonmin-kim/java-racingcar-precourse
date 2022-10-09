@@ -1,4 +1,4 @@
-package racingcar.domain.carname;
+package racingcar.domain.carname.validation;
 
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
 import static org.assertj.core.api.Assertions.assertThatNoException;

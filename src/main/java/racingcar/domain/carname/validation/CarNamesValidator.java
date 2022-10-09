@@ -1,4 +1,4 @@
-package racingcar.domain.carname;
+package racingcar.domain.carname.validation;
 
 public interface CarNamesValidator {
 
