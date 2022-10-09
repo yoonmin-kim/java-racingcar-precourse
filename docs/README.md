@@ -7,8 +7,8 @@
 
 [시도 횟수 검증]
 * [x] 숫자인지 확인
-* [ ] 0보다 큰 값인지 확인(양수)
-* [ ] 검증 실패시 IllegalArgumentException 발생
+* [x] 0보다 큰 값인지 확인(양수)
+* [x] 검증 실패시 IllegalArgumentException 발생
 * [ ] "[ERROR]"로 시작하는 에러메시지 출력 후 그 부분부터 다시 입력
   
 [자동차 경주]
