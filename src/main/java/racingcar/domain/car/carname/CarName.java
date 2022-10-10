@@ -12,4 +12,9 @@ public class CarName {
         this.validator = validator;
         validator.validate(carName);
     }
+
+    @Override
+    public String toString() {
+        return carName;
+    }
 }

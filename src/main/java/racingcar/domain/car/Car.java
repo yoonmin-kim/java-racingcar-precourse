@@ -5,11 +5,16 @@ import racingcar.domain.car.move.Move;
 
 public class Car {
 
+    public static final String SEPARATOR = " : ";
     private CarName carName;
     private Move move;
 
     public Car(CarName carName, Move move) {
         this.carName = carName;
         this.move = move;
+    }
+
+    public String move(int random) {
+        return carName + SEPARATOR + move.move(random);
     }
 }
