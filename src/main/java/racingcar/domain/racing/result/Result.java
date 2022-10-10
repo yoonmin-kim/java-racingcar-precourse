@@ -6,6 +6,7 @@ import racingcar.domain.car.Car;
 public interface Result {
 
     String LINE_BREAK = "\n";
+    String SEPARATOR = ", ";
 
     String result(List<Car> cars, List<Integer> randoms);
 }

@@ -15,6 +15,18 @@ public class Car {
     }
 
     public String move(int random) {
-        return carName + SEPARATOR + move.move(random);
+        return carName() + SEPARATOR + move.move(random);
+    }
+
+    public int moveCount() {
+        return move.moveCount();
+    }
+
+    public String carName() {
+        return carName.toString();
+    }
+
+    public boolean isWinner(int moveCount) {
+        return moveCount() == moveCount;
     }
 }

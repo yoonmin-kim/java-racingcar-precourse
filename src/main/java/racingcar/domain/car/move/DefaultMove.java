@@ -16,4 +16,9 @@ public class DefaultMove implements Move {
         }
         return move.toString();
     }
+
+    @Override
+    public int moveCount() {
+        return move.length();
+    }
 }
