@@ -12,12 +12,13 @@ public class MoveResult implements Result {
     }
 
     @Override
-    public String result(List<Car> cars, List<Integer> randoms) {
+    public String moveResult(List<Car> cars, List<Integer> randoms) {
         for (int i = 0; i < cars.size(); i++) {
             Car car = cars.get(i);
             Integer random = randoms.get(i);
             result.append(car.move(random)).append(LINE_BREAK);
         }
+        result.append(LINE_BREAK);
         return result.toString();
     }
 }

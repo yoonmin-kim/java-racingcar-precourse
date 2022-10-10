@@ -39,9 +39,9 @@ class MoveResultTest {
     void result(int stop, int move1, int move2) {
         String expected = names[0] + SEPARATOR + LINE_BREAK
                 + names[1] + SEPARATOR + MOVE_FORWARD + LINE_BREAK
-                + names[2] + SEPARATOR + MOVE_FORWARD + LINE_BREAK;
-        assertThat(result.result(cars, Arrays.asList(stop, move1, move2))).isEqualTo(
-                expected);
+                + names[2] + SEPARATOR + MOVE_FORWARD + LINE_BREAK
+                + LINE_BREAK;
+        assertThat(result.moveResult(cars, Arrays.asList(stop, move1, move2))).isEqualTo(expected);
     }
 
 }

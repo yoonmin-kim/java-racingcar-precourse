@@ -12,6 +12,7 @@ public class WinnerResult implements Result {
     private static final int WINNER_BEGINNING = 0;
     private static final int WINNER_END = (-2);
     String winner;
+    String moveResult;
     Result result;
 
     public WinnerResult(Result result) {
@@ -20,11 +21,12 @@ public class WinnerResult implements Result {
     }
 
     @Override
-    public String result(List<Car> cars, List<Integer> randoms) {
-        return result.result(cars, randoms) + winner(cars);
+    public String moveResult(List<Car> cars, List<Integer> randoms) {
+        moveResult = result.moveResult(cars, randoms);
+        return moveResult;
     }
 
-    private String winner(List<Car> cars) {
+    public String winner(List<Car> cars) {
         List<Integer> maxMoveCount = createMaxMoveCount(cars);
         List<String> winners = createWinners(cars, maxMoveCount.get(MAX_MOVE_COUNT));
         for (String winnerName : winners) {
@@ -59,6 +61,6 @@ public class WinnerResult implements Result {
 
     @Override
     public String toString() {
-        return winner;
+        return moveResult + winner;
     }
 }

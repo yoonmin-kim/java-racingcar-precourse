@@ -7,6 +7,7 @@ import racingcar.domain.car.carname.validation.CarNamesValidator;
 
 public class CarNames {
 
+    private static final String SEPARATOR = ",";
     private String carNames;
     private CarNamesValidator validator;
 
@@ -18,7 +19,7 @@ public class CarNames {
 
     public List<CarName> createCarNames(CarNameValidator carNameValidator) {
         List<CarName> createCarNames = new ArrayList<>();
-        for (String carName : carNames.split(",")) {
+        for (String carName : carNames.split(SEPARATOR)) {
             createCarNames.add(new CarName(carName, carNameValidator));
         }
         return createCarNames;

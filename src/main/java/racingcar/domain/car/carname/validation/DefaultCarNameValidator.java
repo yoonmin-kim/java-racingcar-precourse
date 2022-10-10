@@ -1,6 +1,6 @@
 package racingcar.domain.car.carname.validation;
 
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
 
 public class DefaultCarNameValidator implements CarNameValidator {
@@ -8,7 +8,7 @@ public class DefaultCarNameValidator implements CarNameValidator {
     List<CarNameValidator> validators;
 
     public DefaultCarNameValidator() {
-        this.validators = Collections.singletonList(new LengthValidator());
+        this.validators = Arrays.asList(new LengthValidator(), new DuplicateCarNameValidator());
     }
 
     @Override

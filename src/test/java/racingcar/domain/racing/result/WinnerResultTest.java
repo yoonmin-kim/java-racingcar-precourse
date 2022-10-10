@@ -16,7 +16,7 @@ import racingcar.domain.car.move.DefaultMove;
 
 class WinnerResultTest {
 
-    Result result;
+    WinnerResult result;
     String[] names = new String[]{"pobi", "woni", "java"};
     List<Car> cars;
 
@@ -34,14 +34,14 @@ class WinnerResultTest {
     @ParameterizedTest
     @CsvSource(value = {"0:3:9"}, delimiter = ':')
     void 단독_우승자(int stop1, int stop2, int move2) {
-        result.result(cars, Arrays.asList(stop1, stop2, move2));
-        assertThat(result.toString()).isEqualTo(WINNER_PREPEND + names[2]);
+        result.moveResult(cars, Arrays.asList(stop1, stop2, move2));
+        assertThat(result.winner(cars)).isEqualTo(WINNER_PREPEND + names[2]);
     }
 
     @ParameterizedTest
     @CsvSource(value = {"0:4:9"}, delimiter = ':')
     void 공동_우승자(int stop, int move1, int move2) {
-        result.result(cars, Arrays.asList(stop, move1, move2));
-        assertThat(result.toString()).isEqualTo(WINNER_PREPEND + names[1] + SEPARATOR + names[2]);
+        result.moveResult(cars, Arrays.asList(stop, move1, move2));
+        assertThat(result.winner(cars)).isEqualTo(WINNER_PREPEND + names[1] + SEPARATOR + names[2]);
     }
 }
